@@ -13,7 +13,7 @@ pipeline {
                 script {
                     def rootDir = pwd()
                    sh ' echo ${rootDir}'
-                   gv = load "${rootDir}/Jenkins/script.groovy" 
+                   gv = load "${rootDir}/DevOps/Jenkins/script.groovy" 
                    sh ' echo "init"'
                 }
             }

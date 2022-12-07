@@ -12,13 +12,17 @@ pipeline {
             steps {
                 script {
                    gv = load "script.groovy" 
+                   sh ' echo "init"'
                 }
             }
         }
         stage("build") {
             steps {
                 script {
+                   sh ' echo "Start build"'
                     gv.buildApp()
+                   sh ' echo "End build"'
+
                 }
             }
         }

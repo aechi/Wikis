@@ -4,6 +4,7 @@ def gv
 pipeline {
     agent any
     parameters {
+    
         string(name: "ADDRESS_IP", defaultValue: "10.18.14.40", trim: true, description: "Address IP of BANC_DE_TEST")
         listGitBranches(
             branchFilter: 'origin.*/(.*)',
@@ -19,8 +20,8 @@ pipeline {
             steps {
                 script {
                     def rootDir = pwd()
-                   sh ' echo ${rootDir}'
-                   gv = load "${rootDir}/DevOps/Jenkins/script.groovy" 
+                    gv = load "${rootDir}/DevOps/Jenkins/script.groovy" 
+                    gv.paramList
                    sh ' echo "init"'
                 }
             }

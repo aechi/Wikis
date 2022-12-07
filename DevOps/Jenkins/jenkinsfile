@@ -11,7 +11,7 @@ pipeline {
             name: 'nameOfVariable',
             type: 'BRANCH',
             remoteURL: 'https://gitlab-energie.actiatelecom.fr/emis/emis.git',
-            credentialsId: 'ID_TOKEN_GITLAB_ACTIA')
+            credentialsId: 'ID_TOKEN_GITLAB_ACTIA_PERSO')
     }
     
     stages {

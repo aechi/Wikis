@@ -5,6 +5,13 @@ pipeline {
     agent any
     parameters {
         string(name: "ADDRESS_IP", defaultValue: "10.18.14.40", trim: true, description: "Address IP of BANC_DE_TEST")
+        listGitBranches(
+            branchFilter: 'origin.*/(.*)',
+            defaultValue: 'default',
+            name: 'nameOfVariable',
+            type: 'BRANCH',
+            remoteURL: 'https://gitlab-energie.actiatelecom.fr/emis/emis.git',
+            credentialsId: 'ID_TOKEN_GITLAB_ACTIA')
     }
     
     stages {

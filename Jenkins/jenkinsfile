@@ -12,7 +12,8 @@ pipeline {
             steps {
                 script {
                     def rootDir = pwd()
-                   gv = load "${rootDir}/script.groovy" 
+                   sh ' echo ${rootDir}'
+                   gv = load "${rootDir}/Jenkins/script.groovy" 
                    sh ' echo "init"'
                 }
             }

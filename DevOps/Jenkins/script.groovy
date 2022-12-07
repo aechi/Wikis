@@ -1,6 +1,10 @@
 #!groovy
 @Library('shared') _
 
+
+def tests() {
+    return ["Test01", "Test2", "Test4"]
+}
 // Call shared libaray for common params
 def paramList = jobParams.listParams ([
     "var1": "value",

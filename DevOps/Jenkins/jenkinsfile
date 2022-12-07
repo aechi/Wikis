@@ -21,12 +21,8 @@ pipeline {
                 script {
                     def rootDir = pwd()
                     gv = load "${rootDir}/DevOps/Jenkins/script.groovy"                     
-                    def choice = input message: 'Please select', ok: 'Next',
-                             parameters: [choice(name: 'PRODUCT', choices: gv.tests(), description: 'Please select the test')]
-                     echo '$choice'
-                    
-                   sh ' echo "init"'
-                }
+
+                  }
             }
         }
         stage("build") {
